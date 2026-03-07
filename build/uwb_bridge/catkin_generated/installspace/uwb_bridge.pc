@@ -1,8 +1,0 @@
-prefix=/home/wen/QAV_WS/install
-
-Name: uwb_bridge
-Description: Description of uwb_bridge
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

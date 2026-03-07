@@ -64,7 +64,7 @@ class Generator_RpGAN(nn.Module):
     def __init__(self):
         super(Generator_RpGAN, self).__init__()
         self.hidden = nn.Sequential(
-            nn.Linear(1, 128), # Input is State (Velocity), matching LaTeX f(x), g(x)
+            nn.Linear(1, 128), # Input is State (Acceleration), matching LaTeX f(x), g(x)
             nn.LayerNorm(128),
             nn.Tanh(),
             nn.Linear(128, 128),
@@ -114,9 +114,9 @@ print("Loading dataset...")
 try:
     df = pd.read_csv('offline_dataset_combined.csv')
     dataset_dict = {
-        'X': {'v': df['v_x'].values, 'v_dot': df['v_dot_x'].values, 'u': df['u_x'].values},
-        'Y': {'v': df['v_y'].values, 'v_dot': df['v_dot_y'].values, 'u': df['u_y'].values},
-        'Z': {'v': df['v_z'].values, 'v_dot': df['v_dot_z'].values, 'u': df['u_z'].values}
+        'X': {'v': df['v_dot_x'].values, 'v_dot': df['v_dot_x'].values, 'u': df['u_x'].values},
+        'Y': {'v': df['v_dot_y'].values, 'v_dot': df['v_dot_y'].values, 'u': df['u_y'].values},
+        'Z': {'v': df['v_dot_z'].values, 'v_dot': df['v_dot_z'].values, 'u': df['u_z'].values}
     }
 except FileNotFoundError:
     print("Warning: Dataset not found. Using dummy data for testing.")

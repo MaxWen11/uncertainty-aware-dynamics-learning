@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/serial_example.dir/examples/serial_example.cc.o  -o /home/wen/QAV_WS/devel/lib/serial/serial_example  -Wl,-rpath,/home/wen/QAV_WS/devel/lib /home/wen/QAV_WS/devel/lib/libserial.so -lrt -lpthread 

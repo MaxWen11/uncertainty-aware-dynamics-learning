@@ -335,13 +335,9 @@ quadrotor_msgs::Px4ctrlDebug Controller::update(
         double bar_eta_y = mpc_y->solve(state_y, ref_y, w_kappa_y);
         double bar_eta_z = mpc_z->solve(state_z, ref_z, w_kappa_z);
 
-        double anc_eta_x = -mpc_x->get_K_anc() * (state_x - ref_x);
-        double anc_eta_y = -mpc_y->get_K_anc() * (state_y - ref_y);
-        double anc_eta_z = -mpc_z->get_K_anc() * (state_z - ref_z);
-
-        eta_x = bar_eta_x + anc_eta_x + des.a(0);
-        eta_y = bar_eta_y + anc_eta_y + des.a(1);
-        eta_z = bar_eta_z + anc_eta_z + des.a(2);
+        eta_x = bar_eta_x + des.a(0);
+        eta_y = bar_eta_y + des.a(1);
+        eta_z = bar_eta_z + des.a(2);
     } else {
         // Uncertainty-Aware PID
         // Error definition: e = x_des - x (Standard control convention often uses e = x_des - x for P term)

@@ -1,8 +1,0 @@
-prefix=/home/wen/QAV_WS/devel
-
-Name: nlink_parser
-Description: Description of nlink_parser
-Version: 2.1.0
-Cflags: -I/home/wen/QAV_WS/devel/include
-Libs: -L${prefix}/lib 
-Requires: message_runtime

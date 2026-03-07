@@ -1,8 +1,0 @@
-prefix=/home/wen/QAV_WS/devel
-
-Name: serial
-Description: Description of serial
-Version: 1.2.1
-Cflags: -I/home/wen/QAV_WS/src/nlink_parser/extern/serial/include
-Libs: -L${prefix}/lib -lserial -lrt -lpthread
-Requires: 

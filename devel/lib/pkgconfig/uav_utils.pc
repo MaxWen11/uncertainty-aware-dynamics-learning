@@ -1,8 +1,0 @@
-prefix=/home/wen/QAV_WS/devel
-
-Name: uav_utils
-Description: Description of uav_utils
-Version: 0.0.0
-Cflags: -I/home/wen/QAV_WS/src/uav_utils/include
-Libs: -L${prefix}/lib 
-Requires: roscpp rospy

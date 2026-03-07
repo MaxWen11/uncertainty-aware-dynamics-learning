@@ -1,2 +1,0 @@
-cmake_utils:nlink_parser:px4ctrl:quadrotor_msgs:uav_utils:uwb_bridge
--DCMAKE_PREFIX_PATH=~/libtorch;/opt/ros/noetic -DCATKIN_DEVEL_PREFIX=/home/wen/QAV_WS/devel -DCMAKE_INSTALL_PREFIX=/home/wen/QAV_WS/install -G Unix Makefiles
